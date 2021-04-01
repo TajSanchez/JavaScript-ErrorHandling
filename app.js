@@ -12,6 +12,7 @@ function takeUserInput() {
       repeatMessageThisManyTimes = Number(
         prompt("How many times would you like your message to be repeated?")
       );
+      debugger
       if (!repeatMessageThisManyTimes) {
         throw new UserInputError("Not a Number.");
       }
@@ -25,7 +26,7 @@ takeUserInput();
 
 function repeatMessage() {
   for (let i = 0; i < repeatMessageThisManyTimes; i++) {
-    console.log(userMessage + " " + i);
+    console.log(userMessage + " This is a repeat " + i);
   }
 }
 
